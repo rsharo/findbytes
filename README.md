@@ -31,12 +31,12 @@ Example:
 ```
 $ echo "foo" > foo.txt
 $ echo "12341234ooxyzzy" > tgt.txt
-$ findbytes foo.txt tgt.txt # "foo" does not exist in tgt.txt
-$ findbytes foo.txt tgt.txt --ps 1  # still no match on "oo\n" due to newline at the end
+$ findbytes foo.txt tgt.txt                 # "foo" does not exist in tgt.txt
+$ findbytes foo.txt tgt.txt --ps 1          # still no match on "oo\n" due to newline at the end
 $ findbytes foo.txt tgt.txt --ps 1 --pe 3   # now we match on "oo"
 8
 $ echo -n "foo" > foo.txt
-$ findbytes foo.txt tgt.txt --ps 1  # no longer a newline in foo.txt, so we match on "oo"
+$ findbytes foo.txt tgt.txt --ps 1          # no longer a newline in foo.txt, so we match on "oo"
 8
 ```
 
